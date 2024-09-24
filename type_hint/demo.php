@@ -8,17 +8,6 @@ require_once 'B.php';
 require_once 'C.php';
 require_once 'I.php';
 
-/*
-// Khởi tạo class A và gọi các phương thức của nó
-$a = new A();
-$a->f();
-$a->a1();
-
-// Khởi tạo class B và gọi phương thức của nó
-$b = new B();
-$b->b1();
-*/
-
 class Demo {
     // Trường hợp 1: type A, return A -> True
     public function typeA_ReturnA(): A {
@@ -172,6 +161,18 @@ class Demo {
     }
     
 }
+
+
+
+// Khởi tạo class A và gọi các phương thức của nó
+$a = new A();
+$a->f();
+$a->a1();
+
+// Khởi tạo class B và gọi phương thức của nó
+$b = new B();
+$b->b1();
+
 
 $demo = new Demo();
 $demo->typeC_ReturnB();
