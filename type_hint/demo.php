@@ -70,13 +70,13 @@ class Demo {
         return null;
     }
 
-    // Trường hợp 11: type C, return A -> False
+    // Trường hợp 11: type C, return A -> True
     public function typeC_ReturnA(): C {
         echo __FUNCTION__ . "<br>";
         return new A();
     }
 
-    // Trường hợp 12: type C, return B  -> False
+    // Trường hợp 12: type C, return B  -> True
     public function typeC_ReturnB(): C {
         echo __FUNCTION__ . "<br>";
         return new B();
