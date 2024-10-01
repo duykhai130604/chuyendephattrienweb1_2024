@@ -8,9 +8,7 @@ $params = [];
 if (!empty($_GET['keyword'])) {
     $params['keyword'] = $_GET['keyword'];
 }
-
 $users = $userModel->getUsers($params);
-
 // Hàm encodeUserId
 function encodeUserId($id)
 {

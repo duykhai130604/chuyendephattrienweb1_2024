@@ -4,10 +4,9 @@ session_start();
 require_once 'models/UserModel.php';
 $userModel = new UserModel();
 
-$user = NULL; // Add new user
+$user = NULL;
 $_id = NULL;
-$error = ''; // Khởi tạo biến lỗi
-
+$error = '';
 function encodeUserId($id) {
     return base64_encode($id);
 }
