@@ -1,13 +1,13 @@
 <?php
+session_start();
 require_once 'models/UserModel.php';
 $userModel = new UserModel();
 
-$user = NULL; //Add new user
-$id = NULL;
-
-if (!empty($_GET['id'])) {
-    $id = $_GET['id'];
-    $userModel->deleteUserById($id);//Delete existing user
+if (!empty($_POST['id'])) {
+    // Xóa người dùng
+    $userModel->deleteUserById($_POST['id']);
 }
+
+// Chuyển hướng về danh sách người dùng
 header('location: list_users.php');
 ?>

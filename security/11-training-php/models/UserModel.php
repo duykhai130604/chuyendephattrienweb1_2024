@@ -49,15 +49,30 @@ class UserModel extends BaseModel {
      * @return mixed
      */
     public function updateUser($input) {
+        // Xác thực tên
+        if (empty($input['name']) || 
+            !preg_match('/^[A-Za-z0-9]{5,15}$/', $input['name'])) {
+            return ['error' => 'Tên là bắt buộc, và chỉ chứa ký tự A-Z, a-z, 0-9, chiều dài từ 5 đến 15 ký tự.'];
+        }
+    
+        // Xác thực mật khẩu
+        if (empty($input['password']) || 
+            !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()]).{5,10}$/', $input['password'])) {
+            return ['error' => 'Mật khẩu là bắt buộc, và phải bao gồm chữ thường, chữ hoa, số, ký tự đặc biệt, chiều dài từ 5 đến 10 ký tự.'];
+        }
+    
+        // Câu lệnh SQL để cập nhật thông tin người dùng
         $sql = 'UPDATE users SET 
                  name = "' . mysqli_real_escape_string(self::$_connection, $input['name']) .'", 
                  password="'. md5($input['password']) .'"
-                WHERE id = ' . $input['id'];
-
+                WHERE id = ' . (int)$input['id'];
+    
+        // Thực hiện cập nhật
         $user = $this->update($sql);
-
+    
         return $user;
     }
+    
 
     /**
      * Insert user
