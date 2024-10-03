@@ -34,7 +34,7 @@ if (!empty($_POST['submit'])) {
             exit; // Thoát để không tiếp tục thực hiện mã phía dưới
         }
     } else {
-        $userModel->insertUser($_POST); // Nếu không có ID, thêm người dùng mới
+        $userModel->insertUser($_POST);
     }
 }
 ?>
