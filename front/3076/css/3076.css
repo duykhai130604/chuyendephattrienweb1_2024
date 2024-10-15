@@ -6,11 +6,11 @@
 .custom-blog-card .custom-img-container {
   position: relative;
 }
-.custom-blog-card img {
+.custom-blog-card .custom-img-container .custom-img {
   width: 100%;
   height: auto;
 }
-.custom-blog-card .custom-date-box {
+.custom-blog-card .custom-img-container .custom-date-box {
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -23,49 +23,49 @@
   flex-direction: column;
   justify-content: center;
 }
-.custom-blog-card .custom-date-box .custom-date {
+.custom-blog-card .custom-img-container .custom-date-box .custom-date {
   font-size: 18px;
   font-weight: bold;
 }
-.custom-blog-card .custom-date-box .custom-month {
+.custom-blog-card .custom-img-container .custom-date-box .custom-month {
   font-size: 12px;
   text-transform: uppercase;
   color: #5a5f61;
 }
-.custom-blog-card .custom-title {
+.custom-blog-card .custom-body {
+  margin-bottom: 30px;
+}
+.custom-blog-card .custom-body .custom-title {
   font-size: 18px;
   font-weight: bold;
 }
-.custom-blog-card .custom-title a {
+.custom-blog-card .custom-body .custom-title .custom-title-link {
   text-decoration: none;
   color: #446a73;
   transition: .3s;
 }
-.custom-blog-card .custom-title a:hover {
+.custom-blog-card .custom-body .custom-title .custom-title-link:hover {
   color: #c45d3c;
 }
-.custom-blog-card .custom-meta {
+.custom-blog-card .custom-body .custom-meta {
   font-size: 12px;
   color: #6c757d;
   margin: 10px 0;
   font-weight: 500;
 }
-.custom-blog-card .custom-meta span {
+.custom-blog-card .custom-body .custom-meta .custom-meta-item {
   margin-right: 10px;
 }
-.custom-blog-card .custom-meta i {
+.custom-blog-card .custom-body .custom-meta .custom-meta-item .custom-meta-icon {
   margin-right: 5px;
 }
-.custom-blog-card .custom-text {
+.custom-blog-card .custom-body .custom-text {
   font-size: 14px;
   color: #555;
   line-height: 1.6;
   margin-bottom: 15px;
 }
-.custom-blog-card .custom-body {
-  margin-bottom: 30px;
-}
-.custom-blog-card .custom-btn {
+.custom-blog-card .custom-body .custom-btn {
   background-color: #c45d3c;
   color: white;
   border: none;
@@ -79,21 +79,23 @@
   display: inline-block;
   margin: 15px 0;
 }
-.custom-blog-card .custom-btn:hover {
+.custom-blog-card .custom-body .custom-btn:hover {
   background-color: #c83605;
 }
-hr {
+.custom-divider {
   margin: 10px 0;
 }
-h1 {
+.custom-heading {
   font-size: 30px;
   line-height: 46px;
   font-weight: 500;
   color: #2e3233;
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
-p {
+.custom-paragraph {
   font-size: 16px;
   line-height: 27px;
   color: #5a5f61;
+  text-align: center;
 }
