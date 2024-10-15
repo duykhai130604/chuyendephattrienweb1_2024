@@ -1,0 +1,136 @@
+
+@font-size-title: 18px;
+@font-size-meta: 12px;
+@font-size-text: 14px;
+@font-size-h1: 30px;
+@font-size-p: 16px;
+
+@color-title: #446a73;
+@color-meta: #6c757d;
+@color-text: #555;
+@color-date: #5a5f61;
+@color-button: #c45d3c;
+@color-button-hover: #c83605;
+
+@margin-top: 30px;
+@margin-bottom: 30px;
+@padding-top: 10px;
+@padding-bottom: 10px;
+
+.custom-blog-card {
+    margin: @margin-top 0;
+    overflow: hidden;
+    background-color: white;
+
+    .custom-img-container {
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .custom-date-box {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .custom-date {
+            font-size: @font-size-title;
+            font-weight: bold;
+        }
+
+        .custom-month {
+            font-size: @font-size-meta;
+            text-transform: uppercase;
+            color: @color-date;
+        }
+    }
+
+    .custom-title {
+        font-size: @font-size-title;
+        font-weight: bold;
+
+        a {
+            text-decoration: none;
+            color: @color-title;
+            transition: .3s;
+
+            &:hover {
+                color: @color-button;
+            }
+        }
+    }
+
+    .custom-meta {
+        font-size: @font-size-meta;
+        color: @color-meta;
+        margin: 10px 0;
+        font-weight: 500;
+
+        span {
+            margin-right: 10px;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    .custom-text {
+        font-size: @font-size-text;
+        color: @color-text;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .custom-body {
+        margin-bottom: @margin-bottom;
+    }
+
+    .custom-btn {
+        background-color: @color-button;
+        color: white;
+        border: none;
+        padding: @padding-top @padding-bottom;
+        text-transform: uppercase;
+        font-size: @font-size-text;
+        transition: .5s;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 15px 0;
+
+        &:hover {
+            background-color: @color-button-hover;
+        }
+    }
+}
+
+hr {
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: @font-size-h1;
+    line-height: 46px;
+    font-weight: 500;
+    color: #2e3233;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: @font-size-p;
+    line-height: 27px;
+    color: #5a5f61;
+}
